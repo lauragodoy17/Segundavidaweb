@@ -1,5 +1,6 @@
 import React from "react";
 import { RiSearch2Line } from "react-icons/ri";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
@@ -7,7 +8,7 @@ const Header = () => {
       {/* Title and search */}
       <div className="flex flex-col md:flex-row md:justify-between md:items-center gap-4 mb-6">
         <div>
-          <h1 className="text-2xl text-gray-300"> SegundaVida</h1>
+          <h1 className="text-2xl text-gray-300">SegundaVida</h1>
         </div>
         <form>
           <div className="w-full relative">
@@ -19,6 +20,18 @@ const Header = () => {
             />
           </div>
         </form>
+        <div className="flex gap-4">
+          <Link to="/InicioSesion">
+            <button className="bg-[#ec7c6a] text-white py-2 px-4 rounded-lg hover:bg-[#e54a40] transition duration-300">
+              Inicio de sesión
+            </button>
+          </Link>
+          <Link to="/RegistroUsuarios">
+            <button className="bg-[#1F1D2B] text-gray-300 py-2 px-4 rounded-lg border border-gray-500 hover:bg-[#2c2c2c] transition duration-300">
+              Registro
+            </button>
+          </Link>
+        </div>
       </div>
       {/* Tabs */}
       <nav className="text-gray-300 flex items-center justify-between md:justify-start md:gap-8 border-b mb-6">

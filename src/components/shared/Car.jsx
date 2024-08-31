@@ -1,15 +1,8 @@
 import React from "react";
-import { RiCloseLine, RiDeleteBin6Line } from "react-icons/ri";
+import { RiCloseLine } from "react-icons/ri";
 import ActionButtons from "../ActionButtons";
-import { useNavigate } from 'react-router-dom';
 
-const Card = (props) => {
-  const { showOrder, setShowOrder } = props;
-  const navigate = useNavigate();
-
-  const handleRedirect = () => {
-    navigate("/RegistroUsuarios"); 
-  };
+const Car = ({ showOrder, setShowOrder, cart, removeFromCart }) => {
   return (
     <div
       className={`lg:col-span-2 fixed top-0 bg-[#1F1D2B] w-full lg:w-96 lg:right-0 h-full transition-all z-50 ${
@@ -33,30 +26,34 @@ const Card = (props) => {
           </div>
           {/* Products */}
           <div className="h-[400px] md:h-[700px] lg:h-[540px] overflow-scroll">
-            {/* Product */}
-            <div className="bg-[#262837] p-4 rounded-xl mb-4">
-              <div className="grid grid-cols-6 mb-4">
-                {/* Product description */}
-                <div className="col-span-4 flex items-center gap-3">
-                  <img src="comida.png" className="w-10 h-10 object-cover" />
-                  <div>
-                    <h5 className="text-sm">Spaicy seaso...</h5>
-                    <p className="text-xs text-gray-500">$2.29</p>
+            {cart.length === 0 ? (
+              <p className="text-gray-400">El carrito está vacío</p>
+            ) : (
+              cart.map((item, index) => (
+                <div key={index} className="bg-[#262837] p-4 rounded-xl mb-4">
+                  <div className="grid grid-cols-6 mb-4">
+                    {/* Product description */}
+                    <div className="col-span-4 flex items-center gap-3">
+                      <img src={item.img} className="w-10 h-10 object-cover" />
+                      <div>
+                        <h5 className="text-sm">{item.description}</h5>
+                        <p className="text-xs text-gray-500">${item.price}</p>
+                      </div>
+                    </div>
+                    {/* Qty */}
+                    <div>
+                      <span>1</span>
+                    </div>
+                    {/* Price */}
+                    <div>
+                      <span>${item.price}</span>
+                    </div>
                   </div>
+                  {/* Acciones */}
+                  <ActionButtons onRemove={() => removeFromCart(index)} />
                 </div>
-                {/* Qty */}
-                <div>
-                  <span>2</span>
-                </div>
-                {/* Price */}
-                <div>
-                  <span>$4.58</span>
-                </div>
-              </div>
-              {/* Acciones */}
-                <ActionButtons/>
-                
-            </div>
+              ))
+            )}
           </div>
         </div>
         {/* Submit payment */}
@@ -67,12 +64,10 @@ const Card = (props) => {
           </div>
           <div className="flex items-center justify-between mb-6">
             <span className="text-gray-400">Subtotal</span>
-            <span>$201.03</span>
+            <span>${cart.reduce((total, item) => total + parseFloat(item.price), 0).toFixed(2)}</span>
           </div>
           <div>
-            <button 
-              onClick={handleRedirect}
-              className="bg-[#ec7c6a] w-full py-2 px-4 rounded-lg">
+            <button className="bg-[#ec7c6a] w-full py-2 px-4 rounded-lg">
               Continuar con el pago
             </button>
           </div>
@@ -82,4 +77,5 @@ const Card = (props) => {
   );
 };
 
-export default Card;
+export default Car;
+
