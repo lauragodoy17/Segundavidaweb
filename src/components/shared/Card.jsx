@@ -1,7 +1,7 @@
 import React from "react";
 
-const Card = (props) => {
-  const { img, description, price, inventory, onAddToCart } = props;
+const Card = (product,onAddToCart) => {
+  const { img, description, price, name } = product;
 
   // Función para manejar la adición al carrito
   const handleAddToCart = () => {
@@ -17,9 +17,9 @@ const Card = (props) => {
         className="w-40 h-40 object-cover -mt-20 shadow-2xl rounded-full"
         alt={description}
       />
-      <p className="text-xl">{description}</p>
+      <p className="text-xl">{name}</p>
       <span className="text-gray-400">${price}</span>
-      <p className="text-gray-600">{inventory} Bowls available</p>
+      <p className="text-gray-600">{description} Bowls available</p>
       <button
         onClick={handleAddToCart}
         className="mt-4 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600"

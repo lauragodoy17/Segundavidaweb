@@ -5,6 +5,7 @@ import {
   RiAddLine,
   RiPieChartLine,
   RiCloseLine,
+  RiArrowDownSLine,
 } from "react-icons/ri";
 // Components
 import Sidebar from "./components/shared/Sidebar";
@@ -12,6 +13,7 @@ import Car from "./components/shared/Car";
 import Header from "./components/shared/Header";
 import Card from "./components/shared/Card";
 import DropdownMenu from "./components/Dropdown/Dropdown";
+import ProductosDAO from "./components/DAO/ProductsDAO";
 
 function App() {
   const [showMenu, setShowMenu] = useState(false);
@@ -65,26 +67,13 @@ function App() {
           <div className="flex items-center justify-between mb-16">
             <h2 className="text-xl text-gray-300">Escoge tus productos</h2>
             <button className="flex items-center gap-4 text-gray-300 bg-[#1F1D2B] py-2 px-4 rounded-lg">
-              <DropdownMenu />
+              <DropdownMenu /> 
             </button>
           </div>
           {/* Content */}
           <div className="p-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16">
             {/* Tarjetas de producto */}
-            <Card
-              img="comida.png"
-              description="Speacy seasoned seafood nodles"
-              price="2.29"
-              inventory="20"
-              onAddToCart={handleAddToCart} 
-            />
-            <Card
-              img="dish.png"
-              description="Speacy seasoned seafood nodles"
-              price="2.29"
-              inventory="20"
-              onAddToCart={handleAddToCart} 
-            />
+            <ProductosDAO/>
             {/* Agrega más tarjetas si es necesario */}
           </div>
         </div>
