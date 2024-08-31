@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import api from "../../../Utils/api";
 import Card from '../shared/Card';
+import api from '../../../Utils/api';
 
 
-const ProductosDAO = () => {
+const ProductosDAO = ({ onAddToCart }) => {
     
     const [products, setProducts] = useState([]);
     const [error, setError] = useState(null);
@@ -12,7 +12,7 @@ const ProductosDAO = () => {
     // Función para obtener productos
     const fetchProducts = async () => {
         try {
-            const response = await axios.get(`${api}/productos`);
+            const response = await axios.get('http://localhost:3080/productos');
             setProducts(response.data);
         } catch (error) {
             console.error('Error fetching products:', error);
@@ -28,9 +28,10 @@ const ProductosDAO = () => {
     return (
         <div className="product-list">
             {error && <p>{error}</p>}
-            {products.map(product => (
-                <Card key={product.Id} product={product} onAddToCart={handleAddToCart} />
-            ))}
+            {products.map((product) => (
+    <Card key={product.Id} product={product} onAddToCart={onAddToCart} />
+))}
+
         </div>
     );
 };

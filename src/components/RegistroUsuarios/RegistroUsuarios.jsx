@@ -93,7 +93,7 @@ export default function RegistroUsuarios() {
 
 
 
-                            <button type="submit">Registrar</button>
+                            <button className="boton_registro" type="submit">Registrar</button>
                             <Link className="olvidaste" to="/InicioSesion">¿Ya tienes una cuenta? Inicia sesión</Link>
 
 

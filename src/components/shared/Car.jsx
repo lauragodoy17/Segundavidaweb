@@ -1,8 +1,32 @@
 import React from "react";
 import { RiCloseLine } from "react-icons/ri";
 import ActionButtons from "../ActionButtons";
+import productImage from "../../assets/computador.jpg"; // Asegúrate de que la ruta sea correcta
 
-const Car = ({ showOrder, setShowOrder, cart, removeFromCart }) => {
+const Car = ({ showOrder, setShowOrder, cart, setCart }) => {
+  const handleAdd = (index) => {
+    const updatedCart = cart.map((item, i) =>
+      i === index ? { ...item, quantity: item.quantity + 1 } : item
+    );
+    setCart(updatedCart);
+  };
+
+  const handleSubtract = (index) => {
+    const updatedCart = cart.map((item, i) =>
+      i === index && item.quantity > 1 ? { ...item, quantity: item.quantity - 1 } : item
+    );
+    setCart(updatedCart);
+  };
+
+  const handleRemove = (index) => {
+    const updatedCart = cart.filter((_, i) => i !== index);
+    setCart(updatedCart);
+  };
+
+  const calculateSubtotal = () => {
+    return cart.reduce((total, item) => total + item.price , 0).toFixed(2);
+  };
+
   return (
     <div
       className={`lg:col-span-2 fixed top-0 bg-[#1F1D2B] w-full lg:w-96 lg:right-0 h-full transition-all z-50 ${
@@ -34,7 +58,11 @@ const Car = ({ showOrder, setShowOrder, cart, removeFromCart }) => {
                   <div className="grid grid-cols-6 mb-4">
                     {/* Product description */}
                     <div className="col-span-4 flex items-center gap-3">
-                      <img src={item.img} className="w-10 h-10 object-cover" />
+                      <img 
+                        src={productImage} // Usa la imagen importada aquí
+                        className="w-10 h-10 object-cover"
+                        alt="Product Image"
+                      />
                       <div>
                         <h5 className="text-sm">{item.description}</h5>
                         <p className="text-xs text-gray-500">${item.price}</p>
@@ -42,15 +70,19 @@ const Car = ({ showOrder, setShowOrder, cart, removeFromCart }) => {
                     </div>
                     {/* Qty */}
                     <div>
-                      <span>1</span>
+                      <span>{item.quantity}</span>
                     </div>
                     {/* Price */}
                     <div>
-                      <span>${item.price}</span>
+                      <span>${(item.price * item.quantity).toFixed(2)}</span>
                     </div>
                   </div>
                   {/* Acciones */}
-                  <ActionButtons onRemove={() => removeFromCart(index)} />
+                  <ActionButtons
+                    onAdd={() => handleAdd(index)}
+                    onSubtract={() => handleSubtract(index)}
+                    onRemove={() => handleRemove(index)}
+                  />
                 </div>
               ))
             )}
@@ -64,7 +96,7 @@ const Car = ({ showOrder, setShowOrder, cart, removeFromCart }) => {
           </div>
           <div className="flex items-center justify-between mb-6">
             <span className="text-gray-400">Subtotal</span>
-            <span>${cart.reduce((total, item) => total + parseFloat(item.price), 0).toFixed(2)}</span>
+            <span>${calculateSubtotal()}</span>
           </div>
           <div>
             <button className="bg-[#ec7c6a] w-full py-2 px-4 rounded-lg">
@@ -78,4 +110,6 @@ const Car = ({ showOrder, setShowOrder, cart, removeFromCart }) => {
 };
 
 export default Car;
+
+
 

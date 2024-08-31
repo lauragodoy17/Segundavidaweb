@@ -93,14 +93,17 @@ app.get('/logout', (req, res) => {
 });
 
 app.get('/productos', (req, res) => {
+    console.log("Se recibió una solicitud para /productos");
     const sql = "SELECT * FROM productos";
-    db.query(sql, (err, results) => {
+    db.query(sql, (err, result) => {
         if (err) {
             return res.status(500).json({ Error: "Error al obtener productos" });
         }
-        return res.status(200).json(results);
+        return res.status(200).json(result);
     });
 });
+
+
 
 app.listen(port, () => {
     console.log(`Servidor corriendo en el puerto ${port}`);
