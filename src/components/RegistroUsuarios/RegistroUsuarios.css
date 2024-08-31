@@ -2,8 +2,11 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100vh; 
-    background-color: #003366; 
+    height: 100vh;
+    background-image: url('../../assets/fondo.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .wrapper {
@@ -22,10 +25,15 @@
     padding: 40px;
 }
 
+.botones{
+
+}
+
 form h1 {
     font-size: 36px;
     text-align: center;
-    color: #ff6600; 
+    color: #ffffff; /* Cambia el color a blanco */
+    font-weight: bold; /* Aplica negrita */
 }
 
 form .input-box {
@@ -74,21 +82,3 @@ form .input-box {
     padding: 0; 
 }
 
-.boton_registro{
-    background-color: #ff6600;
-}
-  
-
-form button {
-    width: 100%;
-    height: 45px;
-    background: #ff6600; 
-    border: none;
-    outline: none;
-    border-radius: 40px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
-    cursor: pointer;
-    font-size: 16px;
-    color: #fff; 
-    font-weight: 700;
-}
