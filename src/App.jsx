@@ -12,6 +12,7 @@ import Sidebar from "./components/shared/Sidebar";
 import Car from "./components/shared/Car";
 import Header from "./components/shared/Header";
 import Card from "./components/shared/Card";
+import DropdownMenu from "./components/Dropdown/Dropdown";
 
 function App() {
   const [showMenu, setShowMenu] = useState(false);
@@ -52,9 +53,11 @@ function App() {
           <Header />
           {/* Title content */}
           <div className="flex items-center justify-between mb-16">
-            <h2 className="text-xl text-gray-300">Choose Dishes</h2>
+            <h2 className="text-xl text-gray-300">Escoge tus productos</h2>
             <button className="flex items-center gap-4 text-gray-300 bg-[#1F1D2B] py-2 px-4 rounded-lg">
-              <RiArrowDownSLine /> Dine in
+              <DropdownMenu /> 
+              
+
             </button>
           </div>
           {/* Content */}

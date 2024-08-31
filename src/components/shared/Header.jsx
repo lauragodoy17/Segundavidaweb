@@ -7,8 +7,7 @@ const Header = () => {
       {/* Title and search */}
       <div className="flex flex-col md:flex-row md:justify-between md:items-center gap-4 mb-6">
         <div>
-          <h1 className="text-2xl text-gray-300">Jeager Resto</h1>
-          <p className="text-gray-500">07 octubre 2022</p>
+          <h1 className="text-2xl text-gray-300"> SegundaVida</h1>
         </div>
         <form>
           <div className="w-full relative">
@@ -27,16 +26,28 @@ const Header = () => {
           href="#"
           className="relative py-2 pr-4 before:w-1/2 before:h-[2px] before:absolute before:bg-[#ec7c6a] before:left-0 before:rounded-full before:-bottom-[1px] text-[#ec7c6a]"
         >
-          Hot dishes
+          Electrónica
         </a>
         <a href="#" className="py-2 pr-4">
-          Cold dishes
+          Muebles y decoración
         </a>
         <a href="#" className="py-2 pr-4">
-          Soup
+          Ropa y accesorios
         </a>
         <a href="#" className="py-2">
-          Grill
+          Electrodomésticos
+        </a>
+        <a href="#" className="py-2">
+          Juguetes y juegos
+        </a>    
+        <a href="#" className="py-2">
+          Libros y revistas
+        </a>
+        <a href="#" className="py-2">
+          Hogar y jardín 
+        </a>
+        <a href="#" className="py-2">
+          Ofertas especiales
         </a>
       </nav>
     </header>
