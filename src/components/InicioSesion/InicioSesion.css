@@ -1,8 +1,12 @@
 .main-wrapper-login {
 	display: flex;
-	align-items: center;
-	justify-content: center;
-	height: 100vh;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-image: url('../../assets/fondo.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 .wrapper-login{
     width: 420px;
@@ -21,6 +25,9 @@
 form h1{
     font-size: 36px;
     text-align: center;
+}
+.boton_sesion{
+    background-color:  rgb(255, 255, 255); ;
 }
 
 form .input-box{
@@ -56,6 +63,7 @@ form .input-box{
     margin-top: 100px;
     margin-left: 25%;
     margin-right: auto;
+    color: #fff;
 }
 
 
