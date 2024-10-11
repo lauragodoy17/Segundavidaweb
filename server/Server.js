@@ -18,7 +18,7 @@ app.use(express.json());
 app.use(cookieParser());
 
 const db = mysql.createConnection({
-    host: 'localhost',
+    host: 'host.docker.internal',
     user: 'root',
     password: '',
     database: 'garaje',
