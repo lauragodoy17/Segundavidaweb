@@ -2,6 +2,7 @@ import React from "react";
 import { RiCloseLine } from "react-icons/ri";
 import ActionButtons from "../ActionButtons";
 import productImage from "../../assets/computador.jpg"; // Asegúrate de que la ruta sea correcta
+import { Link } from "react-router-dom"; // Importa Link
 
 const Car = ({ showOrder, setShowOrder, cart, setCart }) => {
   const handleAdd = (index) => {
@@ -24,7 +25,7 @@ const Car = ({ showOrder, setShowOrder, cart, setCart }) => {
   };
 
   const calculateSubtotal = () => {
-    return cart.reduce((total, item) => total + item.price , 0).toFixed(2);
+    return cart.reduce((total, item) => total + item.price * item.quantity, 0).toFixed(2);
   };
 
   return (
@@ -99,9 +100,11 @@ const Car = ({ showOrder, setShowOrder, cart, setCart }) => {
             <span>${calculateSubtotal()}</span>
           </div>
           <div>
-            <button className="bg-[#ec7c6a] w-full py-2 px-4 rounded-lg">
-              Continuar con el pago
-            </button>
+            <Link to="/carrito">
+              <button className="bg-[#ec7c6a] w-full py-2 px-4 rounded-lg">
+                Continuar con el pago
+              </button>
+            </Link>
           </div>
         </div>
       </div>
@@ -110,6 +113,7 @@ const Car = ({ showOrder, setShowOrder, cart, setCart }) => {
 };
 
 export default Car;
+
 
 
 

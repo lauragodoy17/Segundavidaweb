@@ -8,12 +8,11 @@ import {
   RiArrowDownSLine,
 } from "react-icons/ri";
 // Components
-import Sidebar from "./components/shared/Sidebar";
-import Car from "./components/shared/Car";
-import Header from "./components/shared/Header";
-import Card from "./components/shared/Card";
-import DropdownMenu from "./components/Dropdown/Dropdown";
-import ProductosDAO from "./components/DAO/ProductsDAO";
+import Sidebar from "../shared/Sidebar";
+import Car from "../shared/Car";
+import Header from "../shared/Header";
+import DropdownMenu from "../Dropdown/Dropdown";
+import ProductosDAO from "../DAO/ProductsDAO";
 
 function App() {
   const [showMenu, setShowMenu] = useState(false);
@@ -62,7 +61,7 @@ function App() {
       <main className="lg:pl-32 lg:pr-96 pb-20">
         <div className="md:p-8 p-4">
           {/* Header */}
-          <Header section={1} />
+          <Header section={4} />
           {/* Title content */}
           <div className="flex items-center justify-between mb-16">
             <h2 className="text-xl text-gray-300">Escoge tus productos</h2>
@@ -73,7 +72,7 @@ function App() {
           {/* Content */}
           <div>
             {/* Tarjetas de producto */}
-            <ProductosDAO onAddToCart={handleAddToCart} numero={1} />
+            <ProductosDAO onAddToCart={handleAddToCart} numero={4} />
             {/* Agrega más tarjetas si es necesario */}
           </div>
         </div>

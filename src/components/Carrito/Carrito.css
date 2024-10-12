@@ -1,0 +1,77 @@
+/* Fondo general y diseño del contenedor */
+.container {
+    display: flex;
+    background-color: #262837;
+    height: 100vh;
+    color: #fff;
+  }
+  
+  /* Diseño del contenido principal */
+  .content {
+    flex: 1;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+  /* Título del carrito */
+  .title {
+    font-size: 2.5rem;
+    color: #ec7c6a;
+    margin-bottom: 20px;
+  }
+  
+  /* Descripción */
+  .description {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    color: #a0a0a0;
+  }
+  
+  /* Elementos del carrito */
+  .cart-items {
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  .cart-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #333;
+  }
+  
+  /* Total del carrito */
+  .cart-total {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+  }
+  
+  /* Botón de pago */
+  .btn {
+    background-color: #ec7c6a;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn:hover {
+    background-color: #d46653;
+  }
+  
+  /* Carrito vacío */
+  .cart-empty {
+    color: #ff6f61;
+    font-size: 1.2rem;
+  }
+  
+  

@@ -2,7 +2,13 @@ import React from "react";
 import { RiSearch2Line } from "react-icons/ri";
 import { Link } from "react-router-dom";
 
-const Header = () => {
+const Header = ({ section }) => {
+  // Clase base para todas las categorías
+  const baseClass = "py-2 pr-4";
+  // Clase que indica la categoría seleccionada
+  const activeClass =
+    "relative py-2 pr-4 before:w-1/2 before:h-[2px] before:absolute before:bg-[#ec7c6a] before:left-0 before:rounded-full before:-bottom-[1px] text-[#ec7c6a]";
+
   return (
     <header>
       {/* Title and search */}
@@ -33,33 +39,30 @@ const Header = () => {
           </Link>
         </div>
       </div>
+
       {/* Tabs */}
       <nav className="text-gray-300 flex items-center justify-between md:justify-start md:gap-8 border-b mb-6">
-        <a
-          href="#"
-          className="relative py-2 pr-4 before:w-1/2 before:h-[2px] before:absolute before:bg-[#ec7c6a] before:left-0 before:rounded-full before:-bottom-[1px] text-[#ec7c6a]"
-        >
+        <Link to="/Electrónica" className={section === 1 ? activeClass : baseClass}>
           Electrónica
-        </a>
-        <a href="#" className="py-2 pr-4">
+        </Link>
+        <Link to="/Muebles" className={section === 2 ? activeClass : baseClass}>
           Muebles y decoración
-        </a>
-        <a href="#" className="py-2 pr-4">
+        </Link>
+        <Link to="/Ropa" className={section === 3 ? activeClass : baseClass}>
           Ropa y accesorios
-        </a>
-        <a href="#" className="py-2">
+        </Link>
+        <Link to="/Electro" className={section === 4 ? activeClass : baseClass}>
           Electrodomésticos
-        </a>
-        <a href="#" className="py-2">
+        </Link>
+        <Link to="/Juguetes" className={section === 5 ? activeClass : baseClass}>
           Juguetes y juegos
-        </a>    
-        <a href="#" className="py-2">
+        </Link>
+        <Link to="/Libros" className={section === 6 ? activeClass : baseClass}>
           Libros y revistas
-        </a>
-        <a href="#" className="py-2">
-          Hogar y jardín 
-        </a>
-
+        </Link>
+        <Link to="/Hogar" className={section === 7 ? activeClass : baseClass}>
+          Hogar y jardín
+        </Link>
       </nav>
     </header>
   );

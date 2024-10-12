@@ -1,0 +1,77 @@
+/* Fondo general y diseño del contenedor */
+.container {
+    display: flex;
+    justify-content: center; /* Asegura que el contenedor esté centrado horizontalmente */
+    align-items: center;     /* Asegura que el contenedor esté centrado verticalmente */
+    background-color: #262837;
+    height: 100vh;
+    color: #fff;
+    padding: 20px; /* Añade algo de relleno en los bordes */
+  }
+  
+  /* Diseño del contenido principal */
+  .content {
+    flex: 1;
+    max-width: 500px; /* Limita el ancho máximo del contenido */
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+  /* Título del pago */
+  .title {
+    font-size: 2.5rem;
+    color: #ec7c6a;
+    margin-bottom: 20px;
+  }
+  
+  /* Descripción general */
+  .description {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    color: #a0a0a0;
+  }
+  
+  /* Detalles del pago */
+  .payment-details {
+    background-color: #1F1D2B;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 400px; /* Limita el ancho máximo para no ocupar todo el espacio en pantallas grandes */
+  }
+  
+  .payment-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+  }
+  
+  .payment-item select {
+    background-color: #262837;
+    color: #ec7c6a;
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+  }
+  
+  /* Botón de pago */
+  .btn {
+    background-color: #ec7c6a;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn:hover {
+    background-color: #d46653;
+  }
+  
+  

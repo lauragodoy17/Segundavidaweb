@@ -1,8 +1,7 @@
 import React from "react";
-import productImage from "../../assets/computador.jpg";
 
 const Card = ({ product, onAddToCart }) => {
-  const { img, description, price, inventory, name } = product;
+  const { img, description, price, inventory, name, faction} = product;
 
   // Función para manejar la adición al carrito
   const handleAddToCart = () => {
@@ -16,7 +15,7 @@ const Card = ({ product, onAddToCart }) => {
       {/* Primera carta */}
       <div className="bg-[#1F1D2B] p-8 rounded-xl flex flex-col items-center gap-2 text-center text-gray-300">
         <img
-          src={productImage}
+          src={"src/assets/"+img}
           className="w-40 h-40 object-cover -mt-20 shadow-2xl rounded-full"
           alt="Product Image"
         />
@@ -30,14 +29,7 @@ const Card = ({ product, onAddToCart }) => {
           Obtenlo
         </button>
       </div>
-
-      {/* Segunda carta */}
-
-
-
     </div>
-
-    
   );
 };
 
