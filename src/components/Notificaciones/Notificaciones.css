@@ -1,0 +1,18 @@
+
+.rectangle {
+    width: 100%; 
+    max-width: 800px; /* Establece un ancho máximo para evitar que se expanda demasiado */
+    height: 100px; /* Mantén la altura como estaba */
+    background-color: #EC7C6A; /* Color del rectángulo */
+    border: 2px solid #2980b9; /* Añade un borde */
+    border-radius: 10px; /* Bordes redondeados */
+    margin: 40px auto; /* Añade un margen superior para separarlo del borde superior y centra horizontalmente */
+    display: flex; /* Flexbox para centrar contenido */
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: center; /* Centra el contenido verticalmente */
+    color: white; /* Color del texto dentro del rectángulo */
+    font-size: 24px; /* Tamaño de fuente del texto */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra para un efecto más visual */
+}
+
+  
