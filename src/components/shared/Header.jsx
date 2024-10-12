@@ -59,9 +59,7 @@ const Header = () => {
         <a href="#" className="py-2">
           Hogar y jardín 
         </a>
-        <a href="#" className="py-2">
-          Ofertas especiales
-        </a>
+
       </nav>
     </header>
   );

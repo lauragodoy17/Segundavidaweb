@@ -2,9 +2,9 @@
 .rectangle {
     width: 100%; 
     max-width: 800px; /* Establece un ancho máximo para evitar que se expanda demasiado */
-    height: 100px; /* Mantén la altura como estaba */
+    height: 80px; /* Mantén la altura como estaba */
     background-color: #EC7C6A; /* Color del rectángulo */
-    border: 2px solid #2980b9; /* Añade un borde */
+    border: 2px solid #ffff; /* Añade un borde */
     border-radius: 10px; /* Bordes redondeados */
     margin: 40px auto; /* Añade un margen superior para separarlo del borde superior y centra horizontalmente */
     display: flex; /* Flexbox para centrar contenido */
@@ -13,6 +13,90 @@
     color: white; /* Color del texto dentro del rectángulo */
     font-size: 24px; /* Tamaño de fuente del texto */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra para un efecto más visual */
+    font-weight: bold;
+
 }
+.rectangle1 {
+    width: 100%; 
+    max-width: 800px; /* Establece un ancho máximo para evitar que se expanda demasiado */
+    height: 350px; /* Mantén la altura como estaba */
+    border: 2px solid #ffff; /* Añade un borde */
+    border-radius: 10px; /* Bordes redondeados */
+    margin: 40px auto; /* Añade un margen superior para separarlo del borde superior y centra horizontalmente */
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: center; /* Centra el contenido verticalmente */
+    color: white; /* Color del texto dentro del rectángulo */
+    font-size: 24px; /* Tamaño de fuente del texto */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
+}
+ .principal{
+    margin: 20px;
+    margin-left: 30px;
+    font-weight: bold;
+}
+
+.line {
+    width: 95%; /* Ajusta el ancho de la línea */
+    border: none;
+    border-bottom: 2px solid #fff; /* Estilo de la línea */
+    margin: 20px ; /* Espacio arriba y abajo, centrando la línea */
+  }
+
+.cuadrado{
+    width: 5%; 
+    height: 30px; /* Mantén la altura como estaba */
+    background-color: #a63ee2; /* Color del rectángulo */
+    border: 2px solid #ffff; /* Añade un borde */
+    border-radius: 10px; /* Bordes redondeados */
+    margin-left: 20px;
+    display: flex; /* Flexbox para centrar contenido */
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: center; /* Centra el contenido verticalmente */
+    color: white; /* Color del texto dentro del rectángulo */
+    font-size: 24px; /* Tamaño de fuente del texto */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra para un efecto más visual */
+    font-weight: bold;
+}
+.cuadrado1{
+    width: 5%; 
+    height: 30px; /* Mantén la altura como estaba */
+    background-color: #b3c938; /* Color del rectángulo */
+    border: 2px solid #ffff; /* Añade un borde */
+    border-radius: 10px; /* Bordes redondeados */
+    margin-left: 20px;
+    display: flex; /* Flexbox para centrar contenido */
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: center; /* Centra el contenido verticalmente */
+    color: white; /* Color del texto dentro del rectángulo */
+    font-size: 24px; /* Tamaño de fuente del texto */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra para un efecto más visual */
+    font-weight: bold;
+}
+.cuadrado2{
+    width: 5%; 
+    height: 30px; /* Mantén la altura como estaba */
+    background-color: #1d89bb; /* Color del rectángulo */
+    border: 2px solid #ffff; /* Añade un borde */
+    border-radius: 10px; /* Bordes redondeados */
+    margin-left: 20px;
+    display: flex; /* Flexbox para centrar contenido */
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: center; /* Centra el contenido verticalmente */
+    color: white; /* Color del texto dentro del rectángulo */
+    font-size: 24px; /* Tamaño de fuente del texto */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra para un efecto más visual */
+    font-weight: bold;
+}
+.recent-container {
+    display: flex; /* Usar Flexbox para alinear el cuadrado y el texto en una fila */
+    align-items: center; /* Centrar verticalmente */
+}
+
+.titulo {
+    margin-left: 10px; /* Margen izquierdo para separar el texto del cuadrado */
+    color: #fff; 
+    font-size: 15px;
+}
+
 
   
