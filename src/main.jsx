@@ -15,30 +15,38 @@ import Libros from './components/sections/libros.jsx';
 import Muebles from './components/sections/muebles.jsx';
 import Ropa from './components/sections/Ropa.jsx';
 import Pago from './components/Pago/Pago.jsx';
-import Carrito from './components/Carrito/Carrito.jsx';
+import Breadcrumbs from './components/Breadcrumbs/Breadcrumbs.jsx';
+
+function MainRoutes() {
+  return (
+    <>
+      <Routes>
+        <Route path="/" element={<App />} />
+        <Route path="/Electronica" element={<App />} />
+        <Route path="/RegistroUsuarios" element={<RegistroUsuarios />} />
+        <Route path="/InicioSesion" element={<InicioSesion />} />
+        <Route path='/Notificaciones' element={<Notificaciones />} />
+        <Route path='/Perfil' element={<Perfil />} />
+        <Route path='/Ofertas' element={<Ofertas />} />
+        <Route path='/Electrodomesticos' element={<Electro />} />
+        <Route path='/hogar' element={<Hogars />} />
+        <Route path='/juguetes' element={<Juguetes />} />
+        <Route path='/Libros' element={<Libros />} />
+        <Route path='/Muebles' element={<Muebles />} />
+        <Route path='/Ropa' element={<Ropa />} />
+        <Route path='/Pago' element={<Pago />} />
+      </Routes>
+    </>
+  );
+}
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <Router>
-      <Routes>
-        <Route path="/" element={<App />} />
-        <Route path="/RegistroUsuarios" element={<RegistroUsuarios />} />
-        <Route path="/InicioSesion" element={<InicioSesion />} />
-        <Route path='Notificaciones' element={<Notificaciones/>}/>
-        <Route path='Perfil' element={<Perfil/>}/>
-        <Route path='Ofertas' element={<Ofertas/>}/>
-        <Route path='Electro' element={<Electro/>}/>
-        <Route path='hogar' element={<Hogars/>}/>
-        <Route path='juguetes' element={<Juguetes/>}/>
-        <Route path='Libros' element={<Libros/>}/>
-        <Route path='Muebles' element={<Muebles/>}/>
-        <Route path='Ropa' element={<Ropa/>}/>
-        <Route path='Pago' element={<Pago/>}/>
-        <Route path='Carrito' element={<Carrito/>}/>
-
-      </Routes>
+      <MainRoutes />
     </Router>
   </React.StrictMode>
 );
+
 
 

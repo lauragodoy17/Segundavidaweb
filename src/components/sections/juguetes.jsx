@@ -13,6 +13,7 @@ import Car from "../shared/Car";
 import Header from "../shared/Header";
 import DropdownMenu from "../Dropdown/Dropdown";
 import ProductosDAO from "../DAO/ProductsDAO";
+import Breadcrumbs from "../Breadcrumbs/Breadcrumbs";
 
 function App() {
   const [showMenu, setShowMenu] = useState(false);
@@ -64,6 +65,7 @@ function App() {
           <Header section={5} />
           {/* Title content */}
           <div className="flex items-center justify-between mb-16">
+            <Breadcrumbs />
             <h2 className="text-xl text-gray-300">Escoge tus productos</h2>
             <button className="flex items-center gap-4 text-gray-300 bg-[#1F1D2B] py-2 px-4 rounded-lg">
               <DropdownMenu /> 

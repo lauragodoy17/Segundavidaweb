@@ -1,0 +1,31 @@
+/* breadcrumbs.css */
+.breadcrumb {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .breadcrumb li {
+    margin-right: 8px;
+    font-size: 14px;
+  }
+  
+  .breadcrumb a {
+    color: #007bff; /* Color azul */
+    text-decoration: none;
+  }
+  
+  .breadcrumb a:hover {
+    color: #0056b3; /* Color azul más oscuro al hacer hover */
+  }
+  
+  .breadcrumb li:after {
+    content: '>';
+    margin-left: 8px;
+  }
+  
+  .breadcrumb li:last-child:after {
+    content: '';
+  }
+  

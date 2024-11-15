@@ -6,7 +6,10 @@ const ActionButtons = ({ onAdd, onSubtract, onRemove }) => {
     <div className="flex gap-2">
       {/* Botón para añadir */}
       <button
-        onClick={onAdd}
+        onClick={() => {
+          console.log("Add clicked");
+          onAdd();
+        }}
         className="border border-green-500 p-2 rounded-lg flex items-center justify-center bg-green-500 hover:bg-green-600"
       >
         <RiAddLine className="text-white" />
@@ -14,7 +17,10 @@ const ActionButtons = ({ onAdd, onSubtract, onRemove }) => {
 
       {/* Botón para restar */}
       <button
-        onClick={onSubtract}
+        onClick={() => {
+          console.log("Subtract clicked");
+          onSubtract();
+        }}
         className="border border-yellow-500 p-2 rounded-lg flex items-center justify-center bg-yellow-500 hover:bg-yellow-600"
       >
         <RiSubtractLine className="text-white" />
@@ -22,7 +28,10 @@ const ActionButtons = ({ onAdd, onSubtract, onRemove }) => {
 
       {/* Botón para eliminar */}
       <button
-        onClick={onRemove}
+        onClick={() => {
+          console.log("Remove clicked");
+          onRemove();
+        }}
         className="border border-red-500 p-2 rounded-lg flex items-center justify-center bg-red-500 hover:bg-red-600"
       >
         <RiDeleteBin6Line className="text-white" />
@@ -32,4 +41,3 @@ const ActionButtons = ({ onAdd, onSubtract, onRemove }) => {
 };
 
 export default ActionButtons;
-

@@ -45,7 +45,7 @@ const Sidebar = (props) => {
 
   // Comprobar si estamos en la ruta de notificaciones, home, perfil u ofertas
   const isActiveNotification = location.pathname === '/notificaciones';
-  const isActiveHome = location.pathname === '/'; // Suponiendo que la ruta de inicio es "/"
+  const isActiveHome = location.pathname === '/Electronica'; // Suponiendo que la ruta de inicio es "/"
   const isActiveProfile = location.pathname === '/perfil'; // Ruta del perfil
   const isActiveOffers = location.pathname === '/ofertas'; // Ruta de ofertas
 
@@ -60,7 +60,7 @@ const Sidebar = (props) => {
           </li>
           <li className="p-4 rounded-tl-xl rounded-bl-xl bg-[#1F1D2B]"> {/* Color uniforme */}
             <Link
-              to="/"
+              to="/Electronica"
               className={`p-4 flex justify-center rounded-xl transition-colors ${isActiveHome ? 'text-white' : 'text-[#ec7c6a]'}`}
             >
               <RiHome6Line className={`text-2xl ${isActiveHome ? 'text-white' : 'text-[#ec7c6a]'}`} />

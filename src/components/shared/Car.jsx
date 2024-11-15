@@ -1,29 +1,37 @@
 import React from "react";
+import './Carrito.css';
 import { RiCloseLine } from "react-icons/ri";
 import ActionButtons from "../ActionButtons";
-import productImage from "../../assets/computador.jpg"; // Asegúrate de que la ruta sea correcta
-import { Link } from "react-router-dom"; // Importa Link
+import productImage from "../../assets/computador.jpg";
+import { Link } from "react-router-dom";
 
 const Car = ({ showOrder, setShowOrder, cart, setCart }) => {
+  // Función para añadir cantidad
   const handleAdd = (index) => {
-    const updatedCart = cart.map((item, i) =>
-      i === index ? { ...item, quantity: item.quantity + 1 } : item
-    );
+    const updatedCart = [...cart];
+    updatedCart[index].quantity += 1;
     setCart(updatedCart);
+    console.log("Cart after add:", updatedCart);
   };
 
+  // Función para restar cantidad, sin reducir a menos de 1
   const handleSubtract = (index) => {
-    const updatedCart = cart.map((item, i) =>
-      i === index && item.quantity > 1 ? { ...item, quantity: item.quantity - 1 } : item
-    );
-    setCart(updatedCart);
+    const updatedCart = [...cart];
+    if (updatedCart[index].quantity > 1) {
+      updatedCart[index].quantity -= 1;
+      setCart(updatedCart);
+      console.log("Cart after subtract:", updatedCart);
+    }
   };
 
+  // Función para eliminar un producto del carrito
   const handleRemove = (index) => {
     const updatedCart = cart.filter((_, i) => i !== index);
     setCart(updatedCart);
+    console.log("Cart after remove:", updatedCart);
   };
 
+  // Calcular el subtotal multiplicando precio unitario por cantidad
   const calculateSubtotal = () => {
     return cart.reduce((total, item) => total + item.price * item.quantity, 0).toFixed(2);
   };
@@ -34,7 +42,6 @@ const Car = ({ showOrder, setShowOrder, cart, setCart }) => {
         showOrder ? "right-0" : "-right-full"
       }`}
     >
-      {/* Orders */}
       <div className="relative pt-16 lg:pt-8 text-gray-300 p-8 h-full">
         <RiCloseLine
           onClick={() => setShowOrder(false)}
@@ -42,43 +49,36 @@ const Car = ({ showOrder, setShowOrder, cart, setCart }) => {
         />
         <h1 className="text-2xl my-4">Tu carrito</h1>
 
-        {/* Car */}
         <div>
           <div className="grid grid-cols-6 mb-4 p-4">
             <h5 className="col-span-4">Item</h5>
             <h5>Cant</h5>
             <h5>Precio</h5>
           </div>
-          {/* Products */}
-          <div className="h-[400px] md:h-[700px] lg:h-[540px] overflow-scroll">
+          <div className="h-[400px] md:h-[700px] lg:h-[540px] overflow-scroll scrollbar-custom">
             {cart.length === 0 ? (
               <p className="text-gray-400">El carrito está vacío</p>
             ) : (
               cart.map((item, index) => (
                 <div key={index} className="bg-[#262837] p-4 rounded-xl mb-4">
                   <div className="grid grid-cols-6 mb-4">
-                    {/* Product description */}
+                    {/* Descripción del producto */}
                     <div className="col-span-4 flex items-center gap-3">
-                      <img 
-                        src={productImage} // Usa la imagen importada aquí
-                        className="w-10 h-10 object-cover"
-                        alt="Product Image"
-                      />
                       <div>
                         <h5 className="text-sm">{item.description}</h5>
                         <p className="text-xs text-gray-500">${item.price}</p>
                       </div>
                     </div>
-                    {/* Qty */}
+                    {/* Cantidad */}
                     <div>
                       <span>{item.quantity}</span>
                     </div>
-                    {/* Price */}
+                    {/* Precio Total por Producto */}
                     <div>
-                      <span>${(item.price * item.quantity).toFixed(2)}</span>
+                      <span>${(item.price * item.quantity)}</span>
                     </div>
                   </div>
-                  {/* Acciones */}
+                  {/* Botones de Acción */}
                   <ActionButtons
                     onAdd={() => handleAdd(index)}
                     onSubtract={() => handleSubtract(index)}
@@ -89,7 +89,7 @@ const Car = ({ showOrder, setShowOrder, cart, setCart }) => {
             )}
           </div>
         </div>
-        {/* Submit payment */}
+        {/* Sección de Pago */}
         <div className="bg-[#262837] absolute w-full bottom-0 left-0 p-4">
           <div className="flex items-center justify-between mb-4">
             <span className="text-gray-400">Descuento</span>
@@ -113,7 +113,3 @@ const Car = ({ showOrder, setShowOrder, cart, setCart }) => {
 };
 
 export default Car;
-
-
-
-
