@@ -21,20 +21,20 @@ function MainRoutes() {
   return (
     <>
       <Routes>
-        <Route path="segundavidaweb/" element={<App />} />
-        <Route path="segundavidaweb/Electronica" element={<App />} />
-        <Route path="segundavidaweb/RegistroUsuarios" element={<RegistroUsuarios />} />
-        <Route path="segundavidaweb/InicioSesion" element={<InicioSesion />} />
-        <Route path='segundavidaweb/Notificaciones' element={<Notificaciones />} />
-        <Route path='segundavidaweb/Perfil' element={<Perfil />} />
-        <Route path='segundavidaweb/Ofertas' element={<Ofertas />} />
-        <Route path='segundavidaweb/Electrodomesticos' element={<Electro />} />
-        <Route path='segundavidaweb/hogar' element={<Hogars />} />
-        <Route path='segundavidaweb/juguetes' element={<Juguetes />} />
-        <Route path='segundavidaweb/Libros' element={<Libros />} />
-        <Route path='segundavidaweb/Muebles' element={<Muebles />} />
-        <Route path='segundavidaweb/Ropa' element={<Ropa />} />
-        <Route path='segundavidaweb/Pago' element={<Pago />} />
+        <Route path="/Segundavidaweb/" element={<App />} />
+        <Route path="/Segundavidaweb/Electronica" element={<App />} />
+        <Route path="/Segundavidaweb/RegistroUsuarios" element={<RegistroUsuarios />} />
+        <Route path="/Segundavidaweb/InicioSesion" element={<InicioSesion />} />
+        <Route path='/Segundavidaweb/Notificaciones' element={<Notificaciones />} />
+        <Route path='/Segundavidaweb/Perfil' element={<Perfil />} />
+        <Route path='/Segundavidaweb/Ofertas' element={<Ofertas />} />
+        <Route path='/Segundavidaweb/Electrodomesticos' element={<Electro />} />
+        <Route path='/Segundavidaweb/hogar' element={<Hogars />} />
+        <Route path='/Segundavidaweb/juguetes' element={<Juguetes />} />
+        <Route path='/Segundavidaweb/Libros' element={<Libros />} />
+        <Route path='/Segundavidaweb/Muebles' element={<Muebles />} />
+        <Route path='/Segundavidaweb/Ropa' element={<Ropa />} />
+        <Route path='/Segundavidaweb/Pago' element={<Pago />} />
       </Routes>
     </>
   );

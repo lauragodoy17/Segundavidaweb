@@ -28,7 +28,7 @@ const Sidebar = (props) => {
           setContraseña(res.data.contraseña);
         } else {
           setAuth(false);
-          navigate('segundavidaweb/InicioSesion');
+          navigate('Segundavidaweb/InicioSesion');
         }
       })
       .catch(err => console.log(err));
@@ -38,16 +38,16 @@ const Sidebar = (props) => {
     axios.get(`${api}/logout`)
       .then(res => {
         setAuth(false);
-        navigate('/segundavidaweb/InicioSesion');
+        navigate('/Segundavidaweb/InicioSesion');
       })
       .catch(err => console.log(err));
   };
 
   // Comprobar si estamos en la ruta de notificaciones, home, perfil u ofertas
-  const isActiveNotification = location.pathname === 'segundavidaweb/notificaciones';
-  const isActiveHome = location.pathname === 'segundavidaweb/Electronica'; // Suponiendo que la ruta de inicio es "/"
-  const isActiveProfile = location.pathname === 'segundavidaweb/perfil'; // Ruta del perfil
-  const isActiveOffers = location.pathname === 'segundavidaweb/ofertas'; // Ruta de ofertas
+  const isActiveNotification = location.pathname === 'Segundavidaweb/notificaciones';
+  const isActiveHome = location.pathname === 'Segundavidaweb/Electronica'; // Suponiendo que la ruta de inicio es "/"
+  const isActiveProfile = location.pathname === 'Segundavidaweb/perfil'; // Ruta del perfil
+  const isActiveOffers = location.pathname === 'Segundavidaweb/ofertas'; // Ruta de ofertas
 
   return (
     <div
@@ -60,7 +60,7 @@ const Sidebar = (props) => {
           </li>
           <li className="p-4 rounded-tl-xl rounded-bl-xl bg-[#1F1D2B]"> {/* Color uniforme */}
             <Link
-              to="/segundavidaweb/Electronica"
+              to="/Segundavidaweb/Electronica"
               className={`p-4 flex justify-center rounded-xl transition-colors ${isActiveHome ? 'text-white' : 'text-[#ec7c6a]'}`}
             >
               <RiHome6Line className={`text-2xl ${isActiveHome ? 'text-white' : 'text-[#ec7c6a]'}`} />
@@ -69,7 +69,7 @@ const Sidebar = (props) => {
 
           <li className="p-4 rounded-tl-xl rounded-bl-xl bg-[#1F1D2B]"> {/* Color uniforme */}
             <Link
-              to="/segundavidaweb/notificaciones"
+              to="/Segundavidaweb/notificaciones"
               className={`p-4 flex justify-center rounded-xl transition-colors ${isActiveNotification ? 'text-white' : 'text-[#ec7c6a]'}`}
             >
               <RiNotification3Line className={`text-2xl ${isActiveNotification ? 'text-white' : 'text-[#ec7c6a]'}`} />
@@ -79,7 +79,7 @@ const Sidebar = (props) => {
           {/* Agregado el botón de perfil con redirección */}
           <li className="p-4 rounded-tl-xl rounded-bl-xl bg-[#1F1D2B]"> {/* Color uniforme */}
             <Link
-              to="/segundavidaweb/perfil" // Ruta de la página de perfil
+              to="/Segundavidaweb/perfil" // Ruta de la página de perfil
               className={`p-4 flex justify-center rounded-xl transition-colors ${isActiveProfile ? 'text-white' : 'text-[#ec7c6a]'}`}
             >
               <RiAccountCircleFill className={`text-2xl ${isActiveProfile ? 'text-white' : 'text-[#ec7c6a]'}`} />
@@ -89,7 +89,7 @@ const Sidebar = (props) => {
           {/* Añadido el botón de ofertas con redirección */}
           <li className="p-4 rounded-tl-xl rounded-bl-xl bg-[#1F1D2B]"> {/* Color uniforme */}
             <Link
-              to="/segundavidaweb/ofertas" // Ruta de la página de ofertas
+              to="/Segundavidaweb/ofertas" // Ruta de la página de ofertas
               className={`p-4 flex justify-center rounded-xl transition-colors ${isActiveOffers ? 'text-white' : 'text-[#ec7c6a]'}`}
             >
               <RiPriceTag3Fill className={`text-2xl ${isActiveOffers ? 'text-white' : 'text-[#ec7c6a]'}`} />
