@@ -38,7 +38,7 @@ const Sidebar = (props) => {
     axios.get(`${api}/logout`)
       .then(res => {
         setAuth(false);
-        navigate('segundavidaweb/InicioSesion');
+        navigate('/segundavidaweb/InicioSesion');
       })
       .catch(err => console.log(err));
   };
@@ -60,7 +60,7 @@ const Sidebar = (props) => {
           </li>
           <li className="p-4 rounded-tl-xl rounded-bl-xl bg-[#1F1D2B]"> {/* Color uniforme */}
             <Link
-              to="/Electronica"
+              to="/segundavidaweb/Electronica"
               className={`p-4 flex justify-center rounded-xl transition-colors ${isActiveHome ? 'text-white' : 'text-[#ec7c6a]'}`}
             >
               <RiHome6Line className={`text-2xl ${isActiveHome ? 'text-white' : 'text-[#ec7c6a]'}`} />
@@ -69,7 +69,7 @@ const Sidebar = (props) => {
 
           <li className="p-4 rounded-tl-xl rounded-bl-xl bg-[#1F1D2B]"> {/* Color uniforme */}
             <Link
-              to="/notificaciones"
+              to="/segundavidaweb/notificaciones"
               className={`p-4 flex justify-center rounded-xl transition-colors ${isActiveNotification ? 'text-white' : 'text-[#ec7c6a]'}`}
             >
               <RiNotification3Line className={`text-2xl ${isActiveNotification ? 'text-white' : 'text-[#ec7c6a]'}`} />
@@ -79,7 +79,7 @@ const Sidebar = (props) => {
           {/* Agregado el botón de perfil con redirección */}
           <li className="p-4 rounded-tl-xl rounded-bl-xl bg-[#1F1D2B]"> {/* Color uniforme */}
             <Link
-              to="/perfil" // Ruta de la página de perfil
+              to="/segundavidaweb/perfil" // Ruta de la página de perfil
               className={`p-4 flex justify-center rounded-xl transition-colors ${isActiveProfile ? 'text-white' : 'text-[#ec7c6a]'}`}
             >
               <RiAccountCircleFill className={`text-2xl ${isActiveProfile ? 'text-white' : 'text-[#ec7c6a]'}`} />
@@ -89,7 +89,7 @@ const Sidebar = (props) => {
           {/* Añadido el botón de ofertas con redirección */}
           <li className="p-4 rounded-tl-xl rounded-bl-xl bg-[#1F1D2B]"> {/* Color uniforme */}
             <Link
-              to="/ofertas" // Ruta de la página de ofertas
+              to="/segundavidaweb/ofertas" // Ruta de la página de ofertas
               className={`p-4 flex justify-center rounded-xl transition-colors ${isActiveOffers ? 'text-white' : 'text-[#ec7c6a]'}`}
             >
               <RiPriceTag3Fill className={`text-2xl ${isActiveOffers ? 'text-white' : 'text-[#ec7c6a]'}`} />

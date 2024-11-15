@@ -81,12 +81,12 @@ const Header = ({ section }) => {
           </div>
         </form>
         <div className="flex gap-4">
-          <Link to="segundavidaweb/InicioSesion">
+          <Link to="/segundavidaweb/InicioSesion">
             <button className="bg-[#ec7c6a] text-white py-2 px-4 rounded-lg hover:bg-[#e54a40] transition duration-300">
               Inicio de sesión
             </button>
           </Link>
-          <Link to="segundavidaweb/RegistroUsuarios">
+          <Link to="/segundavidaweb/RegistroUsuarios">
             <button className="bg-[#1F1D2B] text-gray-300 py-2 px-4 rounded-lg border border-gray-500 hover:bg-[#2c2c2c] transition duration-300">
               Registro
             </button>
@@ -96,25 +96,25 @@ const Header = ({ section }) => {
 
       {/* Tabs */}
       <nav className="text-gray-300 flex items-center justify-between md:justify-start md:gap-8 border-b mb-6">
-        <Link to="/Electronica" className={section === 1 ? activeClass : baseClass}>
+        <Link to="/segundavidaweb/Electronica" className={section === 1 ? activeClass : baseClass}>
           Electrónica
         </Link>
-        <Link to="/Muebles" className={section === 2 ? activeClass : baseClass}>
+        <Link to="/segundavidaweb/Muebles" className={section === 2 ? activeClass : baseClass}>
           Muebles y decoración
         </Link>
-        <Link to="segundavidaweb/Ropa" className={section === 3 ? activeClass : baseClass}>
+        <Link to="/segundavidaweb/Ropa" className={section === 3 ? activeClass : baseClass}>
           Ropa y accesorios
         </Link>
-        <Link to="segundavidaweb/Electrodomesticos" className={section === 4 ? activeClass : baseClass}>
+        <Link to="/segundavidaweb/Electrodomesticos" className={section === 4 ? activeClass : baseClass}>
           Electrodomésticos
         </Link>
-        <Link to="segundavidaweb/Juguetes" className={section === 5 ? activeClass : baseClass}>
+        <Link to="/segundavidaweb/Juguetes" className={section === 5 ? activeClass : baseClass}>
           Juguetes y juegos
         </Link>
-        <Link to="segundavidaweb/Libros" className={section === 6 ? activeClass : baseClass}>
+        <Link to="/segundavidaweb/Libros" className={section === 6 ? activeClass : baseClass}>
           Libros y revistas
         </Link>
-        <Link to="segundavidaweb/Hogar" className={section === 7 ? activeClass : baseClass}>
+        <Link to="/segundavidaweb/Hogar" className={section === 7 ? activeClass : baseClass}>
           Hogar y jardín
         </Link>
       </nav>
