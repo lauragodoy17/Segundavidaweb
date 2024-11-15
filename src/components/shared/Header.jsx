@@ -96,10 +96,10 @@ const Header = ({ section }) => {
 
       {/* Tabs */}
       <nav className="text-gray-300 flex items-center justify-between md:justify-start md:gap-8 border-b mb-6">
-        <Link to="segundavidaweb/Electronica" className={section === 1 ? activeClass : baseClass}>
+        <Link to="/Electronica" className={section === 1 ? activeClass : baseClass}>
           Electrónica
         </Link>
-        <Link to="segundavidaweb/Muebles" className={section === 2 ? activeClass : baseClass}>
+        <Link to="/Muebles" className={section === 2 ? activeClass : baseClass}>
           Muebles y decoración
         </Link>
         <Link to="segundavidaweb/Ropa" className={section === 3 ? activeClass : baseClass}>
