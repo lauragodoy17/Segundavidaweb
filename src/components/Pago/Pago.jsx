@@ -14,7 +14,7 @@ const Pago = () => {
         icon: 'success',
         confirmButtonText: 'OK'
       }).then(() => {
-        navigate('/'); // Redirigir a la pantalla de inicio después de confirmar la alerta
+        navigate('segundavidaweb/'); // Redirigir a la pantalla de inicio después de confirmar la alerta
       });
       
   };

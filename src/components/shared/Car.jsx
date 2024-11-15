@@ -100,7 +100,7 @@ const Car = ({ showOrder, setShowOrder, cart, setCart }) => {
             <span>${calculateSubtotal()}</span>
           </div>
           <div>
-            <Link to="/carrito">
+            <Link to="segundavidaweb/carrito">
               <button className="bg-[#ec7c6a] w-full py-2 px-4 rounded-lg">
                 Continuar con el pago
               </button>

@@ -29,7 +29,6 @@ function Breadcrumbs() {
         {/* Enlace de Inicio - Redirige a la página principal (por ejemplo, '/') */}
         <li>
           <Link to="/" className="text-gray-400 hover:text-orange-500">
-            Inicio
           </Link>
         </li>
 

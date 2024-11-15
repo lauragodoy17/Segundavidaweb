@@ -66,7 +66,7 @@ export default function InicioSesion() {
                   </div>
 
                   <button type="submit" className="boton_sesion" >Iniciar</button>
-                  <Link className="olvidaste" to="/RegistroUsuarios">¿No tienes una cuenta? Registrate</Link>
+                  <Link className="olvidaste" to="segundavidaweb/RegistroUsuarios">¿No tienes una cuenta? Registrate</Link>
 
           
               </form>

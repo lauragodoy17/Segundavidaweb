@@ -40,7 +40,7 @@ export default function RegistroUsuarios() {
           axios.post(`${api}/Registro`, values)
             .then(res => {
               if (res.data.Status === "Success") {
-                navigate('/InicioSesion');
+                navigate('segundavidaweb/InicioSesion');
               } else {
                 setErrors({ server: "Error en el registro" });
               }
@@ -94,7 +94,7 @@ export default function RegistroUsuarios() {
 
 
                             <button className="boton_registro" type="submit">Registrar</button>
-                            <Link className="olvidaste" to="/InicioSesion">¿Ya tienes una cuenta? Inicia sesión</Link>
+                            <Link className="olvidaste" to="segundavidaweb/InicioSesion">¿Ya tienes una cuenta? Inicia sesión</Link>
 
 
                             {errors.server && <p className="error">{errors.server}</p>}

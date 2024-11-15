@@ -28,7 +28,7 @@ const Sidebar = (props) => {
           setContraseña(res.data.contraseña);
         } else {
           setAuth(false);
-          navigate('/InicioSesion');
+          navigate('segundavidaweb/InicioSesion');
         }
       })
       .catch(err => console.log(err));
@@ -38,16 +38,16 @@ const Sidebar = (props) => {
     axios.get(`${api}/logout`)
       .then(res => {
         setAuth(false);
-        navigate('/InicioSesion');
+        navigate('segundavidaweb/InicioSesion');
       })
       .catch(err => console.log(err));
   };
 
   // Comprobar si estamos en la ruta de notificaciones, home, perfil u ofertas
-  const isActiveNotification = location.pathname === '/notificaciones';
-  const isActiveHome = location.pathname === '/Electronica'; // Suponiendo que la ruta de inicio es "/"
-  const isActiveProfile = location.pathname === '/perfil'; // Ruta del perfil
-  const isActiveOffers = location.pathname === '/ofertas'; // Ruta de ofertas
+  const isActiveNotification = location.pathname === 'segundavidaweb/notificaciones';
+  const isActiveHome = location.pathname === 'segundavidaweb/Electronica'; // Suponiendo que la ruta de inicio es "/"
+  const isActiveProfile = location.pathname === 'segundavidaweb/perfil'; // Ruta del perfil
+  const isActiveOffers = location.pathname === 'segundavidaweb/ofertas'; // Ruta de ofertas
 
   return (
     <div
