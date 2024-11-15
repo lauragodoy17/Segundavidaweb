@@ -21,20 +21,20 @@ function MainRoutes() {
   return (
     <>
       <Routes>
-        <Route path="/" element={<App />} />
-        <Route path="/Electronica" element={<App />} />
-        <Route path="/RegistroUsuarios" element={<RegistroUsuarios />} />
-        <Route path="/InicioSesion" element={<InicioSesion />} />
-        <Route path='/Notificaciones' element={<Notificaciones />} />
-        <Route path='/Perfil' element={<Perfil />} />
-        <Route path='/Ofertas' element={<Ofertas />} />
-        <Route path='/Electrodomesticos' element={<Electro />} />
-        <Route path='/hogar' element={<Hogars />} />
-        <Route path='/juguetes' element={<Juguetes />} />
-        <Route path='/Libros' element={<Libros />} />
-        <Route path='/Muebles' element={<Muebles />} />
-        <Route path='/Ropa' element={<Ropa />} />
-        <Route path='/Pago' element={<Pago />} />
+        <Route path="segundavidaweb/" element={<App />} />
+        <Route path="segundavidaweb/Electronica" element={<App />} />
+        <Route path="segundavidaweb/RegistroUsuarios" element={<RegistroUsuarios />} />
+        <Route path="segundavidaweb/InicioSesion" element={<InicioSesion />} />
+        <Route path='segundavidaweb/Notificaciones' element={<Notificaciones />} />
+        <Route path='segundavidaweb/Perfil' element={<Perfil />} />
+        <Route path='segundavidaweb/Ofertas' element={<Ofertas />} />
+        <Route path='segundavidaweb/Electrodomesticos' element={<Electro />} />
+        <Route path='segundavidaweb/hogar' element={<Hogars />} />
+        <Route path='segundavidaweb/juguetes' element={<Juguetes />} />
+        <Route path='segundavidaweb/Libros' element={<Libros />} />
+        <Route path='segundavidaweb/Muebles' element={<Muebles />} />
+        <Route path='segundavidaweb/Ropa' element={<Ropa />} />
+        <Route path='segundavidaweb/Pago' element={<Pago />} />
       </Routes>
     </>
   );
